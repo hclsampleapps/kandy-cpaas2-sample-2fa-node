@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>2FA | Dashboard</title>
+</head>
+
+<body>
+    <h2>2FA App</h2>
+    <form>
+        <button type="submit" formaction="/logout" method="get" class="float-rt">Logout</button>
+        <div id="authScreen">
+            <h4>Authenticate via</h4>
+            <ul>
+                <div class="btn-container">
+                    <li><button type="submit" id="verify-via-sms-btn" formaction="/auth-via-sms" formmethod="get">SMS</button></li>
+                    <li><button type="submit" id="verify-via-email-btn" formaction="/auth-via-email" formmethod="get">Email</button>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </form>
+</body>
+
+</html>

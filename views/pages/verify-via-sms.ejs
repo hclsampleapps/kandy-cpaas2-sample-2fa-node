@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>2FA | Verify Via SMS</title>
+</head>
+
+<body>
+    <h2>2FA App</h2>
+    <% include ../partial/alert %>
+    <a href="/dashboard" target="_self">Back</a>
+    <form>
+        <h4 class="text-center">Verify via SMS</h2>
+        <div class="input-group">
+            <label for="number">Phone Number</label>
+            <input type="text" placeholder="+12082167831" name="number" />
+        </div>
+        <br />
+        <button type="submit" formaction="/send-otp-via-sms" formmethod="POST">Send OTP</button>
+    </form>
+</body>
+
+</html>
