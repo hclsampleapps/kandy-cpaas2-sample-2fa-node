@@ -118,7 +118,7 @@ server.route('/send-otp-via-sms')
     }
   })
 
-server.route('/verify-otp-via-sms')
+server.route('/verify-otp')
   .post(async (req, res) => {
 
     try {
