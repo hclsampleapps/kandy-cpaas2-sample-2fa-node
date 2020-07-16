@@ -1,40 +1,22 @@
 # kandy-cpaas2-sample-2fa-node
-
-2FA app based on node.js, is used to create communication channel between two users via 2FA APIs
-
-## Setup & Run
-
-Install dependencies via
-
-	npm install
-
-Start the server via
-
-	npm start
-
+​
+This is an elementary login authentication use case of two-factor authentication via SMS or Email. The main focus of this application is to understand and implement the 2FA flow, so least amount of stress is given to the authentication/login mechanism.
+​
+## Installation
+1. To install dependencies, run
+```bash
+npm install @kandy-io/cpaas-nodejs-sdk --save
+npm install
+```
+2. To start the server, run
+```bash
+npm start
+```
+​
 ## Usage
-
-### Login
-
-There are three fields in the form
-
-1. **Base Url**: Enter base url.
-2. **Private Project Key**: Enter private project key.
-3. **Private Project Secret**: Enter private project secret value.
-
-### Dashboard
-
-There are 2 options
-
-1. Email
-2. SMS
-
-### Send OTP Verification
-
-1. **Phone number**: The phone number where the OTP is to be sent and do submit.
-2. **Verification code**: Enter the received OTP to verify OTP.
-
-### Email OTP Verification
-
-1. **Email Address**: Enter the email id where the OTP is to be sent and do submit.
-2. **Verification code**: Enter the received OTP to verify OTP.
+The application comprises of three simple pages, login, code verification, dashboard/portal
+- On opening the application in the browser, the login screen is presented. The user needs to enter the `Private project key` / `Private project secret` and click on the `Login` button.
+- Once the credentials are verified, the verification page is presented to user. Here the user has 2 options, either receive 2FA via SMS or via EMAIL. 
+- Once select any option user need to enter destination phone number/email for receiving code.
+- The user now needs to enter the verification code received in the mentioned phone number or email and click `Verify` button.
+- The application verifies the entered code. If the code validates, the user will prompted with a success alert `OTP verified successfully` else the user will be promoted with an error alert `Code invalid or expired` and is required to re-enter the verification code.
