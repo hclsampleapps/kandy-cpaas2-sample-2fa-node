@@ -130,7 +130,7 @@ server.route('/verify-otp')
       if (response.verified) {
        res.render('pages/verify', {
           alert: {
-            message: 'OTP verifies successfully',
+            message: 'OTP verified successfully',
             type: 'success'
           }
         })
