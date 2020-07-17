@@ -128,9 +128,12 @@ server.route('/verify-otp')
       })
 
       if (response.verified) {
-        login()
-        // The code is verified and redirected to dashboard/portal/protected area of app.
-        res.render('pages/dashboard')
+       res.render('pages/verify', {
+          alert: {
+            message: 'OTP verified successfully',
+            type: 'success'
+          }
+        })
       } else {
         // The code is invalid and error message received from server is shown as error alert.
         res.render('pages/verify', {
@@ -180,7 +183,7 @@ server.route('/send-otp-via-email').post(async (req, res) => {
     
     setCredentialsVerified()
 
-    res.render('pages/verify-email-otp', {
+    res.render('pages/verify', {
       alert: {
         message: 'Verification code has been sent to your Email ID',
         type: 'success'
